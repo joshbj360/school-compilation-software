@@ -1,0 +1,526 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9012F060-A8D1-487B-9996-465BD7FA0CDC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>resultEnginev2.Program</StartupObject>
+    <RootNamespace>resultEnginev2</RootNamespace>
+    <AssemblyName>resultEnginev2</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>kwikdisk.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.BonusSkins.v17.2" />
+    <Reference Include="DevExpress.Charts.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Dashboard.v17.2.Win, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v17.2" />
+    <Reference Include="DevExpress.DataAccess.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v17.2.UI, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Map.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.TreeMap.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.2" />
+    <Reference Include="DevExpress.Utils.v17.2.UI, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.2" />
+    <Reference Include="DevExpress.XtraCharts.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.2.UI, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.2.Wizard, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.2" />
+    <Reference Include="DevExpress.XtraGauges.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v17.2.Presets, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v17.2.Win, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.2" />
+    <Reference Include="DevExpress.Printing.v17.2.Core" />
+    <Reference Include="DevExpress.XtraMap.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v17.2.Extensions, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v17.2.Extensions, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Input.Manipulations" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="class_master\dashboard\adminDB.Designer.vb">
+      <DependentUpon>adminDB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="class_master\dashboard\adminDB.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="class_master\dashboard\formTeacherDB.Designer.vb">
+      <DependentUpon>formTeacherDB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="class_master\dashboard\formTeacherDB.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="class_master\dashboard\subjectTeacherDB.Designer.vb">
+      <DependentUpon>subjectTeacherDB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="class_master\dashboard\subjectTeacherDB.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HelpFrm.designer.vb">
+      <DependentUpon>HelpFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HelpFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login\frmlogin.designer.vb">
+      <DependentUpon>frmlogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="login\frmlogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Dashboard.vb" />
+    <Compile Include="Modules\databind.vb" />
+    <Compile Include="Modules\DefaultSubject.vb" />
+    <Compile Include="Modules\MoreFunctions.vb" />
+    <Compile Include="Modules\MySchool.vb" />
+    <Compile Include="Modules\Score.vb" />
+    <Compile Include="Modules\Staff.vb" />
+    <Compile Include="Modules\Std_Class.vb" />
+    <Compile Include="Modules\Subject.vb" />
+    <Compile Include="Modules\User.vb" />
+    <Compile Include="class_master\add_class.Designer.vb">
+      <DependentUpon>add_class.vb</DependentUpon>
+    </Compile>
+    <Compile Include="class_master\add_class.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="class_master\dashboard\admin_dashboard.Designer.vb">
+      <DependentUpon>admin_dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="class_master\dashboard\admin_dashboard.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="class_master\dashboard\formTeacher_dashboard.Designer.vb">
+      <DependentUpon>formTeacher_dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="class_master\dashboard\formTeacher_dashboard.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="class_master\dashboard\subjectTeacher_dashboard.Designer.vb">
+      <DependentUpon>subjectTeacher_dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="class_master\dashboard\subjectTeacher_dashboard.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="student_marks\reports\cat_sheet.Designer.vb">
+      <DependentUpon>cat_sheet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="student_marks\reports\cat_sheet.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="student_marks\reports\performance_reports\reportForm.Designer.vb">
+      <DependentUpon>reportForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="student_marks\reports\performance_reports\reportForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="result_db1DataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>result_db1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="result_db1DataSet.vb">
+      <DependentUpon>result_db1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sch_setup\sch_setup.designer.vb">
+      <DependentUpon>sch_setup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="sch_setup\sch_setup.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sch_setup\user_manager.Designer.vb">
+      <DependentUpon>user_manager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="sch_setup\user_manager.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="student_marks\add_scores.Designer.vb">
+      <DependentUpon>add_scores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="student_marks\add_scores.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="student_marks\add_student.Designer.vb">
+      <DependentUpon>add_student.vb</DependentUpon>
+    </Compile>
+    <Compile Include="student_marks\add_student.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="student_marks\reports\performance_reports\Master_class_rank.Designer.vb">
+      <DependentUpon>Master_class_rank.vb</DependentUpon>
+    </Compile>
+    <Compile Include="student_marks\reports\performance_reports\Master_class_rank.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="student_marks\reports\Master_report.designer.vb">
+      <DependentUpon>Master_report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="student_marks\reports\Master_report.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="student_marks\reports\report_sheet.designer.vb">
+      <DependentUpon>report_sheet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="student_marks\reports\report_sheet.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="student_marks\searchResult.Designer.vb">
+      <DependentUpon>searchResult.vb</DependentUpon>
+    </Compile>
+    <Compile Include="student_marks\searchResult.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="subject_master\add_assign_subjects.Designer.vb">
+      <DependentUpon>add_assign_subjects.vb</DependentUpon>
+    </Compile>
+    <Compile Include="subject_master\add_assign_subjects.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TestForm.Designer.vb">
+      <DependentUpon>TestForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TestForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XtraUserControl1.Designer.vb">
+      <DependentUpon>XtraUserControl1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControl1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="class_master\add_class.resx">
+      <DependentUpon>add_class.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="class_master\dashboard\adminDB.resx">
+      <DependentUpon>adminDB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="class_master\dashboard\admin_dashboard.resx">
+      <DependentUpon>admin_dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="class_master\dashboard\formTeacherDB.resx">
+      <DependentUpon>formTeacherDB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="class_master\dashboard\formTeacher_dashboard.resx">
+      <DependentUpon>formTeacher_dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="class_master\dashboard\subjectTeacherDB.resx">
+      <DependentUpon>subjectTeacherDB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="class_master\dashboard\subjectTeacher_dashboard.resx">
+      <DependentUpon>subjectTeacher_dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpFrm.resx">
+      <DependentUpon>HelpFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login\frmlogin.resx">
+      <DependentUpon>frmlogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="student_marks\reports\cat_sheet.resx">
+      <DependentUpon>cat_sheet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="student_marks\reports\performance_reports\reportForm.resx">
+      <DependentUpon>reportForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sch_setup\sch_setup.resx">
+      <DependentUpon>sch_setup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sch_setup\user_manager.resx">
+      <DependentUpon>user_manager.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="student_marks\add_scores.resx">
+      <DependentUpon>add_scores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="student_marks\add_student.resx">
+      <DependentUpon>add_student.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="student_marks\reports\performance_reports\Master_class_rank.resx">
+      <DependentUpon>Master_class_rank.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="student_marks\reports\Master_report.resx">
+      <DependentUpon>Master_report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="student_marks\reports\report_sheet.resx">
+      <DependentUpon>report_sheet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="student_marks\searchResult.resx">
+      <DependentUpon>searchResult.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="subject_master\add_assign_subjects.resx">
+      <DependentUpon>add_assign_subjects.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForm.resx">
+      <DependentUpon>TestForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControl1.resx">
+      <DependentUpon>XtraUserControl1.vb</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="result_db1DataSet.xsc">
+      <DependentUpon>result_db1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="result_db1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>result_db1DataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="result_db1DataSet.xss">
+      <DependentUpon>result_db1DataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shape 10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shape 199.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shape 69.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shape 11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shape 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shape 94.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shape 105.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shape 70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shape 110.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shape 154.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shape 121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-clear-list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shape 198.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shape 701.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shape 691.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG-20210928-WA0002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hadronLogoWhiteTrans1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="kwikdisk.ico" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
